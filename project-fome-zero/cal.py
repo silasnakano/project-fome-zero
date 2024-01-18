@@ -4,33 +4,45 @@ import numpy as np
 
 df = pd.read_csv('data/processed/zomato_processed.csv')
 
-
 # %%
-cols = ['country', 'city']
-group = df.loc[:, cols].groupby('country').nunique().sort_values('city', ascending=False)
-
-group.reset_index().head(1)
-
+cols = ['city', 'restaurant_id']
+group = df.loc[:, cols].groupby('city').nunique().sort_values('restaurant_id', ascending=False).reset_index()
+group
 # %%
-cols = ['country', 'restaurant_id']
-group = df.loc[:, cols].groupby('country').nunique().sort_values('restaurant_id', ascending=False)
-
-group.reset_index().head(10)
-
+cols = ['city', 'restaurant_id']
+linhas_selecionadas = df['aggregate_rating'] > 4
+group = df.loc[linhas_selecionadas, cols].groupby('city').nunique().sort_values('restaurant_id', ascending=False).reset_index()
+group
 # %%
-cols = ['country', 'restaurant_id']
-linhas_selecionadas = df['price_range'] == 4
-group = df.loc[linhas_selecionadas, cols].groupby('country').count().sort_values('restaurant_id', ascending=False)
-
-group.reset_index().head(10)
+cols = ['city', 'restaurant_id']
+linhas_selecionadas = df['aggregate_rating'] < 2.5
+group = df.loc[linhas_selecionadas, cols].groupby('city').nunique().sort_values('restaurant_id', ascending=False).reset_index()
+group
 # %%
-cols = ['country', 'cuisines']
-group = df.loc[:, cols].groupby('country').nunique().sort_values('cuisines', ascending=False)
-
-group.reset_index().head(10)
+df.columns
 # %%
-cols = ['country', 'votes']
-group = df.loc[:, cols].groupby('country').sum().sort_values('votes', ascending=False)
-
-group.reset_index().head(10)
+cols = ['city', 'average_cost_for_two']
+group = df.loc[:, cols].groupby('city').mean().sort_values('average_cost_for_two', ascending=False).reset_index()
+group
+# %%
+cols = ['city', 'cuisines']
+group = df.loc[:, cols].groupby('city').nunique().sort_values('cuisines', ascending=False).reset_index()
+group
+# %%
+df.columns
+# %%
+cols = ['city', 'restaurant_id']
+linhas_selecionadas = df['has_table_booking'] == 1
+group = df.loc[linhas_selecionadas, cols].groupby('city').nunique().sort_values('restaurant_id', ascending=False).reset_index()
+group
+# %%
+cols = ['city', 'restaurant_id']
+linhas_selecionadas = df['is_delivering_now'] == 1
+group = df.loc[linhas_selecionadas, cols].groupby('city').nunique().sort_values('restaurant_id', ascending=False).reset_index()
+group
+# %%
+cols = ['city', 'restaurant_id']
+linhas_selecionadas = df['has_online_delivery'] == 1
+group = df.loc[linhas_selecionadas, cols].groupby('city').nunique().sort_values('restaurant_id', ascending=False).reset_index()
+group
 # %%

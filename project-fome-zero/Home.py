@@ -40,7 +40,7 @@ st.sidebar.markdown("""---""")
 
 # Filtros
 st.sidebar.markdown('### Filtros')
-country_options = st.sidebar.multiselect('Escolha um pais: ', df.loc[:, 'country'].unique().tolist(), default=['Brazil', 'United States of America', 'England', 'Qatar', 'Australia'])
+country_options = st.sidebar.multiselect('Escolha um pais: ', df.loc[:, 'country'].unique().tolist(), default=['Brazil', 'Philippines', 'Qatar', 'United Arab Emirates'])
 st.sidebar.markdown("""---""")
 
 # Button Download
@@ -63,6 +63,8 @@ st.markdown(
     - Cidades:
         - Métricas dos maiores restaurantes por cidade.
     - Restaurantes:
+        - Indicadores dos maiores restaurantes.
+    - Culinária:
         - Insights de tipos de culinária com os melhores restaurantes.
     ### Ask for help!
     - Time de Data Science no Discord

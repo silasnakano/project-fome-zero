@@ -1,8 +1,6 @@
-# %%
 import pandas as pd
 import inflection
 
-# %%
 # Preenchimento do nome dos países
 COUNTRIES = {
     1: "India",
@@ -84,7 +82,6 @@ def clean_code(df1):
 
     return df1
 
-# %%
 # Leitura dos dados
 df = pd.read_csv('raw/zomato.csv')
 
