@@ -25,7 +25,7 @@ def calcule_number(cols, op):
 # ============================ Estrutura do Código ==========================
 
 # Load dataset
-df = pd.read_csv('data/processed/zomato_processed.csv')
+df = pd.read_csv('./data/processed/zomato_processed.csv')
 
 # ------------------------------ Sidebar ----------------------------------
 
