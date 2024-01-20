@@ -121,7 +121,7 @@ with st.container():
         cuisines = line['cuisines']
         currency = line['currency']
         ratings = line['aggregate_rating']
-        color = f'{line['color_name']}'
+        color = f"{line['color_name']}"
 
         html = "<p><strong>{}</strong></p>"
         html += "<p>Price: {},00 ({}) para dois"
