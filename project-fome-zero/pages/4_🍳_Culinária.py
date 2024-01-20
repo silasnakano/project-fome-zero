@@ -115,8 +115,8 @@ with st.container():
     italian, american, arabian, japanese, homemade = st.columns(len(cui), gap='large')
 
     with italian:
-        st.metric(label=f'Italiana: {cui['Italian']['restaurant_name']}', 
-                  value=f'{cui['Italian']['aggregate_rating']}/5.0',
+        st.metric(label=f"Italiana: {cui['Italian']['restaurant_name']}", 
+                  value=f"{cui['Italian']['aggregate_rating']}/5.0",
                   help=f"""
                   País: {cui['Italian']['country']}\n 
                   Cidade: {cui['Italian']['city']}\n 
@@ -125,8 +125,8 @@ with st.container():
                   )
 
     with american:
-        st.metric(label=f'Americana: {cui['American']['restaurant_name']}',
-                  value=f'{cui['American']['aggregate_rating']}/5.0',
+        st.metric(label=f"Americana: {cui['American']['restaurant_name']}",
+                  value=f"{cui['American']['aggregate_rating']}/5.0",
                   help=f"""
                   País: {cui['American']['country']}\n
                   Cidade: {cui['American']['city']}\n
@@ -135,8 +135,8 @@ with st.container():
                   )
 
     with arabian:
-        st.metric(label=f'Árabe: {cui['Arabian']['restaurant_name']}',
-                  value=f'{cui['Arabian']['aggregate_rating']}/5.0',
+        st.metric(label=f"Árabe: {cui['Arabian']['restaurant_name']}",
+                  value=f"{cui['Arabian']['aggregate_rating']}/5.0",
                   help=f"""
                   País: {cui['Arabian']['country']}\n
                   Cidade: {cui['Arabian']['city']}\n
@@ -145,8 +145,8 @@ with st.container():
                   )
 
     with japanese:
-        st.metric(label=f'Japonês: {cui['Japanese']['restaurant_name']}',
-                  value=f'{cui['Japanese']['aggregate_rating']}/5.0',
+        st.metric(label=f"Japonês: {cui['Japanese']['restaurant_name']}",
+                  value=f"{cui['Japanese']['aggregate_rating']}/5.0",
                   help=f"""
                   País: {cui['Japanese']['country']}\n
                   Cidade: {cui['Japanese']['city']}\n
@@ -155,8 +155,8 @@ with st.container():
                   )
 
     with homemade:
-        st.metric(label=f'Caseira: {cui['Home-made']['restaurant_name']}',
-                  value=f'{cui['Home-made']['aggregate_rating']}/5.0',
+        st.metric(label=f"Caseira: {cui['Home-made']['restaurant_name']}",
+                  value=f"{cui['Home-made']['aggregate_rating']}/5.0",
                   help=f"""
                   País: {cui['Home-made']['country']}\n
                   Cidade: {cui['Home-made']['city']}\n
