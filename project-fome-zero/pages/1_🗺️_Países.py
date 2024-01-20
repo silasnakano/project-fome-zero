@@ -52,12 +52,12 @@ def ratings_country(df):
 # ============================ Estrutura do Código ===============================
 
 # Load dataset
-df = pd.read_csv('./data/processed/zomato_processed.csv')
+df = pd.read_csv('project-fome-zero/data/processed/zomato_processed.csv')
 
 # ----------------------------------- Sidebar --------------------------------------
 
 # Load Img
-image = Image.open('logo.png')
+image = Image.open('project-fome-zero/logo.png')
 st.sidebar.image(image, width=120)
 
 # Título e Subtítulo
